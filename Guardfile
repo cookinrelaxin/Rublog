@@ -9,4 +9,9 @@ guard :minitest, spring: true do
   # Run tests when controllers change
   watch(%r{^app/controllers\.rb$})
 
+  # Run tests when views change
+  watch(%r{^app\/views\/([^\/]*)\/\w*.html.erb$}) { 'test' }
+
+  # Run tests when routes change
+  watch(%r{^config\/routes.rb$}) { 'test' }
 end
