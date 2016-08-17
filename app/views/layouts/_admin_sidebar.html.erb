@@ -8,6 +8,10 @@
             <span class="glyphicon glyphicon-file"></span>
             <%= link_to "Posts",       admin_posts_path,       id: "sidebar-posts" %>
         </li>
+        <li class="sidebar-element <%= "current" if yield(:section) == "Pages" %>">
+            <span class="glyphicon glyphicon-book"></span>
+            <%= link_to "Pages",       admin_pages_path,       id: "sidebar-pages" %>
+        </li>
         <li class="sidebar-element <%= "current" if yield(:section) == "Comments" %>">
             <span class="glyphicon glyphicon-comment"></span>
             <%= link_to "Comments",    admin_comments_path,    id: "sidebar-comments" %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     get 'admin/overview'
     get 'admin/posts'
+    get 'admin/pages'
     get 'admin/comments'
     get 'admin/newsletter'
     get 'admin/subscribers'
