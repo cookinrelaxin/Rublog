@@ -1,14 +1,14 @@
 <header class="navbar navbar-fixed-top">
     <div class="container">
-        <%= link_to "Zack's Ruby Blog", "#", id: "title" %>
+        <%= link_to "Zack's Ruby Blog", root_path, id: "title" %>
         <aside id="subtitle">
             Tutorials and tips on Ruby/Rails
         </aside>
         <nav>
             <ul class="nav navbar-nav navbar-left">
-                <li><%= link_to "Home", "#" %></li>
-                <li><%= link_to "About", "#" %></li>
-                <li><%= link_to "Contact", "#" %></li>
+                <li><%= link_to "Home",    home_path, id: "nav-home" %></li>
+                <li><%= link_to "About",   about_path, id: "nav-about" %></li>
+                <li><%= link_to "Contact", contact_path, id: "nav-contact" %></li>
             </ul>
         </nav>
     </div>
