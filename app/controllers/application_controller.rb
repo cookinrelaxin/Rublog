@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
 
   def contact
   end
+
+  def login
+  end
+
 end

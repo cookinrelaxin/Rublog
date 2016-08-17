@@ -25,4 +25,10 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
         assert_response :success
         assert_select "title", "Contact | Zack's Ruby Blog"
     end
+
+    test "should get login" do
+        get login_path
+        assert_response :success
+        assert_select "title", "Login | Zack's Ruby Blog"
+    end
 end

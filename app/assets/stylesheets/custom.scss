@@ -58,3 +58,34 @@ footer {
         }
     }
 }
+
+/*
+ * admin
+ */
+
+.admin-sidebar {
+    float: left;
+    list-style: none;
+    border-right: 2px solid $gray-light;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar-element {
+    padding-bottom: 30px;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    .glyphicon {
+        font-size: 32px;
+        vertical-align: middle;
+    }
+}
+.current {
+    color: blue;
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+}
