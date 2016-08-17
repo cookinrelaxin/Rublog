@@ -1,12 +1,16 @@
 <footer>
     <small>
-        <%= link_to "Zack's Ruby Blog", '#' %> by <%= link_to "Zachary Feldcamp", "#" %>
+        <%= link_to "Zack's Ruby Blog", root_path, id: "footer-title" %>
+        made from scratch in
+        <%= link_to "Ruby on Rails", "http://rubyonrails.org", id: "footer-rails"%>
+        by
+        <%= link_to "Zachary Feldcamp", about_path, id: "footer-author" %>
     </small>
     <nav>
         <ul>
-            <li><%= link_to 'Home',    '#' %></li>
-            <li><%= link_to 'About',   '#' %></li>
-            <li><%= link_to 'Contact', '#' %></li>
+            <li><%= link_to 'Home',    root_path,    id: "footer-home" %></li>
+            <li><%= link_to 'About',   about_path,   id: "footer-about" %></li>
+            <li><%= link_to 'Contact', contact_path, id: "footer-contact" %></li>
         </ul>
     </nav>
 </footer>
