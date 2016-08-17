@@ -1,4 +1,15 @@
-<h1>Zack's Ruby Blog</h1>
-<aside>
-    Tutorials and tips on Ruby/Rails
-</aside>
+<header class="navbar navbar-fixed-top">
+    <div class="container">
+        <%= link_to "Zack's Ruby Blog", "#", id: "title" %>
+        <aside id="subtitle">
+            Tutorials and tips on Ruby/Rails
+        </aside>
+        <nav>
+            <ul class="nav navbar-nav navbar-left">
+                <li><%= link_to "Home", "#" %></li>
+                <li><%= link_to "About", "#" %></li>
+                <li><%= link_to "Contact", "#" %></li>
+            </ul>
+        </nav>
+    </div>
+</header>
