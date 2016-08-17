@@ -5,6 +5,9 @@ class AdminController < ApplicationController
   def posts
   end
 
+  def pages
+  end
+
   def comments
   end
 

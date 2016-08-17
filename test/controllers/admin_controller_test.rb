@@ -13,6 +13,12 @@ class AdminControllerTest < ActionDispatch::IntegrationTest
         assert_select "title", "Posts | Admin | Zack's Ruby Blog"
     end
 
+    test "should get pages" do
+        get admin_pages_url
+        assert_response :success
+        assert_select "title", "Pages | Admin | Zack's Ruby Blog"
+    end
+
     test "should get comments" do
         get admin_comments_url
         assert_response :success
