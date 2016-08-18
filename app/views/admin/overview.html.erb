@@ -1,4 +1,51 @@
 <% provide(:title, "Overview | Admin") %>
 <% provide(:section, "Overview") %>
-<h1>Overview</h1>
-<%= render 'layouts/admin_sidebar' %>
+<div class="row">
+    <div class="col-md-3">
+        <%= render 'layouts/admin_sidebar' %>
+    </div>
+    <div class="col-md-8 admin-pages">
+        <h1>Overview</h1>
+        <div class="blog-title">
+            <h3>Blog Title</h3>
+            <button id="edit-blog-title" class="btn btn-default">Edit</button>
+            <div class="edit-blog-title-container">
+                <input type="text/submit/hidden/button/image" name="" id="" value="">
+                <br>
+                <button id="save-blog-title" class="btn btn-default">Save</button>
+                <button id="cancel-blog-title" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+        <div class="blog-description">
+            <h3>Blog Description</h3>
+            <button class="btn btn-default">Edit</button>
+        </div>
+        <div class="blog-authors">
+            <h3>Blog Authors</h3>
+            <button class="btn btn-default">Edit</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+
+$("#edit-blog-title").click(function() {
+    $(this).hide();
+    var container = $(this).parent().find(".edit-blog-title-container");
+    container.css("display", "block");
+});
+
+$("#save-blog-title").click(function() {
+    var container = $(this).parent();
+    container.css("display", "none");
+    var edit = $(this).parent().parent().find("#edit-blog-title");
+    edit.show();
+});
+
+$("#cancel-blog-title").click(function() {
+    var container = $(this).parent();
+    container.css("display", "none");
+    var edit = $(this).parent().parent().find("#edit-blog-title");
+    edit.show();
+});
+
+</script>

@@ -103,6 +103,10 @@ footer {
     }
 }
 
+/*
+ * Admin Pages
+ */
+
 .dropdown {
     margin-top: 20px;
 }
@@ -120,4 +124,33 @@ tr .page-row button {
 
 tr:hover .page-row button {
     display: inline;
+}
+
+/*
+ * Admin Overview
+ */
+
+.blog-title {
+    margin-top: 20px;
+    h3 {
+        display: inline;
+    }
+}
+
+.blog-description {
+    margin-top: 20px;
+    h3 {
+        display: inline;
+    }
+}
+
+.blog-authors {
+    margin-top: 20px;
+    h3 {
+        display: inline;
+    }
+}
+
+.edit-blog-title-container {
+    display: none;
 }
