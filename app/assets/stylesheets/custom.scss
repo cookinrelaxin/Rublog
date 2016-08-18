@@ -7,7 +7,8 @@
 
 body {
     padding-top: 120px;
-    font-style: 'sans-serif'
+    font-style: 'sans-serif';
+    box-sizing: border-box;
 }
 
 /*
@@ -63,12 +64,24 @@ footer {
  * admin
  */
 
+.admin-pages {
+    padding: 0;
+    margin: 0;
+    /* background: gray; */
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .admin-sidebar {
-    float: left;
+    /* float: left; */
     list-style: none;
     border-right: 2px solid $gray-light;
-    padding-right: 10px;
+    padding-left: 0px;
     font-size: 18px;
+
+    /* background: lightgray; */
 }
 
 .sidebar-element {
@@ -83,9 +96,28 @@ footer {
     }
 }
 .current {
-    color: blue;
+    color: cornflowerblue;
     a {
-        color: blue;
+        color: cornflowerblue;
         text-decoration: none;
     }
+}
+
+.dropdown {
+    margin-top: 20px;
+}
+
+table {
+    margin-top: 20px;
+    tr:hover {
+        cursor: pointer;
+    }
+}
+
+tr .page-row button {
+    display: none;
+}
+
+tr:hover .page-row button {
+    display: inline;
 }

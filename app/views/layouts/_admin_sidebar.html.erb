@@ -1,28 +1,26 @@
-<div class="container">
-    <ul class="admin-sidebar">
-        <li class="sidebar-element <%= "current" if yield(:section) == "Overview" %>">
-            <span class="glyphicon glyphicon-home"></span>
-            <%= link_to "Overview",    admin_overview_path,    id: "sidebar-overview" %>
-        </li>
-        <li class="sidebar-element <%= "current" if yield(:section) == "Posts" %>">
-            <span class="glyphicon glyphicon-file"></span>
-            <%= link_to "Posts",       admin_posts_path,       id: "sidebar-posts" %>
-        </li>
-        <li class="sidebar-element <%= "current" if yield(:section) == "Pages" %>">
-            <span class="glyphicon glyphicon-book"></span>
-            <%= link_to "Pages",       admin_pages_path,       id: "sidebar-pages" %>
-        </li>
-        <li class="sidebar-element <%= "current" if yield(:section) == "Comments" %>">
-            <span class="glyphicon glyphicon-comment"></span>
-            <%= link_to "Comments",    admin_comments_path,    id: "sidebar-comments" %>
-        </li>
-        <li class="sidebar-element <%= "current" if yield(:section) == "Newsletter" %>">
-            <span class="glyphicon glyphicon-envelope"></span>
-            <%= link_to "Newsletter",  admin_newsletter_path,  id: "sidebar-newsletter" %>
-        </li>
-        <li class="sidebar-element <%= "current" if yield(:section) == "Subscribers" %>">
-            <span class="glyphicon glyphicon-user"></span>
-            <%= link_to "Subscribers", admin_subscribers_path, id: "sidebar-subscribers" %>
-        </li>
-    </ul>
-</div>
+<ul class="admin-sidebar">
+    <li class="sidebar-element <%= "current" if yield(:section) == "Overview" %>">
+        <span class="glyphicon glyphicon-home"></span>
+        <%= link_to "Overview",    admin_overview_path,    id: "sidebar-overview" %>
+    </li>
+    <li class="sidebar-element <%= "current" if yield(:section) == "Posts" %>">
+        <span class="glyphicon glyphicon-file"></span>
+        <%= link_to "Posts",       admin_posts_path,       id: "sidebar-posts" %>
+    </li>
+    <li class="sidebar-element <%= "current" if yield(:section) == "Pages" %>">
+        <span class="glyphicon glyphicon-book"></span>
+        <%= link_to "Pages",       admin_pages_path,       id: "sidebar-pages" %>
+    </li>
+    <li class="sidebar-element <%= "current" if yield(:section) == "Comments" %>">
+        <span class="glyphicon glyphicon-comment"></span>
+        <%= link_to "Comments",    admin_comments_path,    id: "sidebar-comments" %>
+    </li>
+    <li class="sidebar-element <%= "current" if yield(:section) == "Newsletter" %>">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <%= link_to "Newsletter",  admin_newsletter_path,  id: "sidebar-newsletter" %>
+    </li>
+    <li class="sidebar-element <%= "current" if yield(:section) == "Subscribers" %>">
+        <span class="glyphicon glyphicon-user"></span>
+        <%= link_to "Subscribers", admin_subscribers_path, id: "sidebar-subscribers" %>
+    </li>
+</ul>

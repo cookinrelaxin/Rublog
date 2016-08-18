@@ -1,4 +1,80 @@
 <% provide(:title, "Pages | Admin") %>
 <% provide(:section, "Pages") %>
-<h1>All Pages</h1>
-<%= render 'layouts/admin_sidebar' %>
+<div class="row">
+    <div class="col-md-3">
+        <%= render 'layouts/admin_sidebar' %>
+    </div>
+    <div class="col-md-8 admin-pages">
+        <h1>All Pages</h1>
+        <button type="button"class="btn btn-primary">
+            New Page
+        </button>
+        <div class="dropdown">
+            <h4>
+                Sort Pages By:
+            </h4>
+            <button class="btn btn-default dropdown-toggle"
+                    type="button"
+                    id="dropdownMenu1"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="true">
+                Last Edited
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Title</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Author</a></li>
+                <li><a href="#">Last Edited</a></li>
+                <li><a href="#">First Published</a></li>
+            </ul>
+        </div>
+        <table class="table table-hover">
+            <tr class="labels">
+                <th>Title</th>
+                <th>Status</th>
+                <th>Author</th>
+                <th>Last Edited</th>
+                <th>First Published</th>
+            </tr>
+            <tr>
+                <td>About</td>
+                <td>Live</td>
+                <td>Zachary Feldcamp</td>
+                <td>8/15/16 6:37 PM</td>
+                <td>8/2/16 3:12 PM</td>
+                <td class="page-row">
+                    <button class="btn btn-default">View</button>
+                </td>
+                <td class="page-row">
+                    <button class="btn btn-primary">Edit</button>
+                </td>
+                <td class="page-row">
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>Live</td>
+                <td>Zachary Feldcamp</td>
+                <td>8/11/16 7:42 PM</td>
+                <td>7/26/16 9:34 PM</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+
+$(".dropdown-menu li a").click(function(e) {
+    e.preventDefault();
+    var button = $(this).parents(".dropdown").find('.btn');
+    button.html($(this).text() + ' <span class="caret"></span>');
+});
+
+<%# $("tr").click(function(e) { %>
+    <%# alert('wow'); %>
+    <%# $(this).insertAfter("<button class="btn btn-primary">Lulz</button>"); %>
+<%# }); %>
+
+</script>
